@@ -27,7 +27,7 @@ public class Process implements Comparable<Process> {
     }
 
     public int getExecutionTime() {
-        return end - start;
+        return end - start - startDuration;
     }
 
     public int getRemainingDuration() {
