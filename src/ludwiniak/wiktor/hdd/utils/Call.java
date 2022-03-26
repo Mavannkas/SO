@@ -4,9 +4,15 @@ import java.util.Objects;
 
 public class Call {
     private int location;
+    private int deadline;
 
-    public Call(int location) {
+    public int getDeadline() {
+        return deadline;
+    }
+
+    public Call(int location, int deadline) {
         this.location = location;
+        this.deadline = deadline;
     }
 
     public int getLocation() {
@@ -15,7 +21,7 @@ public class Call {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || !(o instanceof Call)) return false;
+        if (!(o instanceof Call)) return false;
         Call call = (Call) o;
         return location == call.location;
     }
