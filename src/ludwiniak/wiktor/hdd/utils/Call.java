@@ -2,7 +2,7 @@ package ludwiniak.wiktor.hdd.utils;
 
 import java.util.Objects;
 
-public class Call {
+public class Call{
     private int location;
     private int deadline;
 
