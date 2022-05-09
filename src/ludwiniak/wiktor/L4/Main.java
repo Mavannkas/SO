@@ -1,18 +1,17 @@
 package ludwiniak.wiktor.L4;
 
+import ludwiniak.wiktor.L4.Algorithms.ControlErrorCount;
 import ludwiniak.wiktor.L4.Algorithms.Even;
 import ludwiniak.wiktor.L4.Algorithms.Proportional;
+import ludwiniak.wiktor.L4.Algorithms.Zone;
 
 public class Main {
     public static void main(String[] args) {
-        PC pc = new PC(10, 10, 100);
+        PC pc = new PC(10, 40, 2000);
 
-        System.out.println(pc.doAlgorithm(new Proportional(), 50));
+        System.out.println(pc.doAlgorithm(new ControlErrorCount(), 30));
+        System.out.println(pc.doAlgorithm(new Zone(), 30));
+        System.out.println(pc.doAlgorithm(new Proportional(), 30));
+        System.out.println(pc.doAlgorithm(new Even(), 30));
     }
 }
-
-
-//Każda ramka ma jakąś wielkość
-//Każdy exec dzielimy na strony
-//Wrzucamy kawałki do pamięci
-//Przy zmianie procesu wrzucamy nową stron  ę do ramki

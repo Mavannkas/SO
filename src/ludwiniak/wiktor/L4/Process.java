@@ -10,7 +10,7 @@ public class Process {
     public int ID;
     public List<Call> calls;
     public final int pagesCount;
-
+    public int errorsCount = 0;
     public Process(int ID, int pagesCount, int callCount) {
         this.ID = ID;
         this.pagesCount = pagesCount;
@@ -18,4 +18,11 @@ public class Process {
         this.calls = callGenerator.generate(callCount);
     }
 
+    public void setErrors(int errors) {
+        this.errorsCount = errors;
+    }
+
+    public int getErrors() {
+        return errorsCount;
+    }
 }

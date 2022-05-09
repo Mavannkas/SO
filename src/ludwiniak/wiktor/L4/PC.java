@@ -15,6 +15,6 @@ public class PC {
     }
 
     public double doAlgorithm(AlgorithmStrategy algorithmStrategy, int framesCount) {
-        return algorithmStrategy.execute(processes, framesCount);
+        return algorithmStrategy.execute(new ArrayList<>(processes), framesCount);
     }
 }
