@@ -10,7 +10,7 @@ public class Proportional extends AlgorithmStrategy{
         int totalErrorCount = 0;
         double framesPerPageProportion = totalFramesCount / (double)countAllPages(processes);
         for(Process process : processes) {
-            int framesForProcess = (int) Math.round(framesPerPageProportion * process.pagesCount);
+            int framesForProcess = (int) Math.ceil(framesPerPageProportion * process.pagesCount);
             int localErrorCount = executeLRU(process.calls, framesForProcess);
             totalErrorCount += localErrorCount;
             log(process.ID, process.pagesCount, process.calls.size(), framesForProcess, localErrorCount);
