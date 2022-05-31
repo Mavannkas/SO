@@ -12,7 +12,7 @@ public class Main {
     private static int MAX_DEADLINE = 1000;
     public static void main(String[] args) {
         CallGenerator callGenerator = new CallGenerator(0, MAX_POSITION, MAX_DEADLINE);
-        List<Call> calls = callGenerator.generate(100);
+        List<Call> calls = callGenerator.generate(100000);
         System.out.println("FCFS");
         FCFS fcfs = new FCFS(new ArrayList<>(calls), START_POSITION, MAX_POSITION);
         System.out.println(fcfs.execute());
